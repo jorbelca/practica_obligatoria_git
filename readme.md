@@ -38,3 +38,6 @@ Los beneficios de Git Flow incluyen:
 Esta metodología es especialmente útil en equipos de desarrollo de software que necesitan gestionar múltiples entornos, como desarrollo, pruebas y producción.
 
 # Proyecto de Git Flow, proceso
+
+![Creacion](capturas_practica_GIT/creacio_repo.png)
+Empezamos,creando un proyecto en Github y clonandolo en local.
