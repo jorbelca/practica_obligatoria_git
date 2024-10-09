@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Desplegaments</title>
+    <title>Atributos HTML</title>
   </head>
   <body>
     <!-- Cabecera -->
     <header>
-      <h1>Nombre del curso y fondo</h1>
-      <p>Imagen de fondo</p>
+      <h1>Atributos HMTL</h1>
     </header>
 
     <!-- Barra de navegación -->
@@ -20,11 +19,42 @@
 
     <!-- Contenido principal -->
     <section>
-      <h2>Descripción del curso</h2>
-      <p>
-        Aquí va una breve descripción del curso de Javascript aplicado a HTML.
-      </p>
+      <p id="demo">Con JS podemos modificar los atributos HTML.</p>
+
+      <button type="button" class="contenido_html" onclick="modifyAttributes()">
+        Modificar Atributos
+      </button>
+      <button type="button" class="contenido_html" onclick="resetAttributes()">
+        Revertir Atributos
+      </button>
     </section>
+
+    <script>
+      function modifyAttributes() {
+        const demo = document.getElementById("demo");
+
+        demo.innerHTML =
+          "Los atributos han sido modificados mediante JavaScript!";
+
+        demo.style.color = "red";
+
+        demo.style.fontSize = "1.5em";
+
+        demo.className = "nuevo-estilo";
+      }
+
+      function resetAttributes() {
+        const demo = document.getElementById("demo");
+
+        demo.innerHTML = "Con JS podemos modificar los atributos HTML.";
+
+        demo.style.color = "#333";
+
+        demo.style.fontSize = "1em";
+
+        demo.className = "";
+      }
+    </script>
 
     <!-- Footer -->
     <footer>
