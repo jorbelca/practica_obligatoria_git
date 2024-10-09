@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Atributos HTML</title>
+  </head>
+  <body>
+    <!-- Cabecera -->
+    <header>
+      <h1>Atributos HMTL</h1>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+      <a href="./index.html">Home</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <section>
+      <p id="demo">Con JS podemos modificar los atributos HTML.</p>
+
+      <button type="button" class="contenido_html" onclick="modifyAttributes()">
+        Modificar Atributos
+      </button>
+      <button type="button" class="contenido_html" onclick="resetAttributes()">
+        Revertir Atributos
+      </button>
+    </section>
+
+    <script>
+      function modifyAttributes() {
+        const demo = document.getElementById("demo");
+
+        demo.innerHTML =
+          "Los atributos han sido modificados mediante JavaScript!";
+
+        demo.style.color = "red";
+
+        demo.style.fontSize = "1.5em";
+
+        demo.className = "nuevo-estilo";
+      }
+
+      function resetAttributes() {
+        const demo = document.getElementById("demo");
+
+        demo.innerHTML = "Con JS podemos modificar los atributos HTML.";
+
+        demo.style.color = "#333";
+
+        demo.style.fontSize = "1em";
+
+        demo.className = "";
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; Jordi Belda 2 DAW SEMI</p>
+    </footer>
+  </body>
+</html>
