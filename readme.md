@@ -39,5 +39,14 @@ Esta metodología es especialmente útil en equipos de desarrollo de software qu
 
 # Proyecto de Git Flow, proceso
 
-![Creacion](capturas_practica_GIT/creacio_repo.png)
-Empezamos,creando un proyecto en Github y clonandolo en local.
+![Creacion](./capturas_practica_GIT/creacio_repo.png)
+Empezamos, creando un proyecto en Github
+
+![Clonar](./capturas_practica_GIT/inicializar_proyecto.png)
+Lo clonamos en local con **git clone**, e inicializamos git flow con **git flow init**, el cual nos hará una serie de preguntas para configurar las ramas segun queramos.
+
+![Estructura](./capturas_practica_GIT/estructura%20y%20primer_commit.png)
+Empezamos con el codigo en si, abrimos Visual Studio Code y generamos la estructura del proyecto con los cuatro archivos html (index, atributos_html, contenido_html y estilos_CSS) y un archivo CSS (styles).
+Despues, con **git add .** añadimos los archivos generados a la zona de trabajo y realizamos el commit (**git commit -m**) junto con el mensaje que describa lo que hemos hecho, describiendo el usuario que lo ha realizado (user_1)
+Finalmente, con **git push origin develop** sincronizamos la rama en remoto.
+(En este caso, he realizado los cambios directamente en develop porque no habia nada y consideraba un sin sentido crear una rama feature)
