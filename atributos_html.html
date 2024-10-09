@@ -18,41 +18,119 @@
     </nav>
 
     <!-- Contenido principal -->
-    <section>
-      <p id="demo">Con JS podemos modificar los atributos HTML.</p>
+    <section class="atributos_html">
+      <!-- Ejemplo_1 -->
+      <div>
+        <h2>¿Podemos modificar la imagen?</h2>
 
-      <button type="button" class="contenido_html" onclick="modifyAttributes()">
-        Modificar Atributos
-      </button>
-      <button type="button" class="contenido_html" onclick="resetAttributes()">
-        Revertir Atributos
-      </button>
+        <img
+          id="demo1"
+          src="https://via.placeholder.com/150"
+          alt="Imagen por defecto"
+          width="150px"
+          height="150px"
+        />
+        <br />
+        <button
+          type="button"
+          class="contenido_html"
+          onclick="modificarImagen()"
+        >
+          Cambiar Imagen
+        </button>
+        <button
+          type="button"
+          class="contenido_html"
+          onclick="restablecerImagen()"
+        >
+          Restablecer Imagen
+        </button>
+      </div>
+
+      <!-- Ejemplo_2 -->
+      <div>
+        <h2>¿Podemos modificar el enlace?</h2>
+
+        <a id="demo2" href="https://www.google.com" target="_blank"
+          >Ir a Google</a
+        >
+        <br />
+        <button
+          type="button"
+          class="contenido_html"
+          onclick="modificarEnlace()"
+        >
+          Cambiar Enlace
+        </button>
+        <button
+          type="button"
+          class="contenido_html"
+          onclick="restablecerEnlace()"
+        >
+          Restablecer Enlace
+        </button>
+      </div>
+      <!-- Ejemplo_3 -->
+      <div>
+        <h2>¿Podemos deshabilitar el botón?</h2>
+
+        <button id="demo3" type="button" class="attr_html">
+          Haz clic aquí
+        </button>
+        <br />
+        <button type="button" class="contenido_html" onclick="modificarBoton()">
+          Deshabilitar Botón
+        </button>
+        <button
+          type="button"
+          class="contenido_html"
+          onclick="restablecerBoton()"
+        >
+          Restablecer Botón
+        </button>
+      </div>
     </section>
 
+    <!-- SCRIPT JS -->
     <script>
-      function modifyAttributes() {
-        const demo = document.getElementById("demo");
+      // Selectores
+      const img = document.getElementById("demo1");
+      const link = document.getElementById("demo2");
+      const button = document.getElementById("demo3");
 
-        demo.innerHTML =
-          "Los atributos han sido modificados mediante JavaScript!";
-
-        demo.style.color = "red";
-
-        demo.style.fontSize = "1.5em";
-
-        demo.className = "nuevo-estilo";
+      // Funciones
+      function modificarImagen() {
+        img.src = "https://via.placeholder.com/300";
+        img.width = 300;
+        img.height = 300;
+        img.alt = "Imagen modificada";
       }
 
-      function resetAttributes() {
-        const demo = document.getElementById("demo");
+      function restablecerImagen() {
+        img.src = "https://via.placeholder.com/150";
+        img.width = 150;
+        img.height = 150;
+        img.alt = "Imagen por defecto";
+      }
 
-        demo.innerHTML = "Con JS podemos modificar los atributos HTML.";
+      function modificarEnlace() {
+        link.href = "https://www.wikipedia.org";
+        link.innerHTML = "Ir a Wikipedia";
+      }
 
-        demo.style.color = "#333";
+      function restablecerEnlace() {
+        link.href = "https://www.google.com";
+        link.innerHTML = "Ir a Google";
+      }
 
-        demo.style.fontSize = "1em";
+      function modificarBoton() {
+        button.disabled = true;
+        button.innerHTML = "Botón Deshabilitado";
+      }
 
-        demo.className = "";
+      function restablecerBoton() {
+        button.disabled = false;
+        button.innerHTML = "Haz clic aquí";
       }
     </script>
 
