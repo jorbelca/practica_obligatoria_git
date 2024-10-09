@@ -39,14 +39,64 @@ Esta metodología es especialmente útil en equipos de desarrollo de software qu
 
 # Proyecto de Git Flow, proceso
 
+⚠️ **Avertencia!** Alguna vez aparece el commando _git config --global gpg.program gpg_, porque la firma de los commits me estaba dando algun problema
+
 ![Creacion](./capturas_practica_GIT/creacio_repo.png)
 Empezamos, creando un proyecto en Github
+
+---
 
 ![Clonar](./capturas_practica_GIT/inicializar_proyecto.png)
 Lo clonamos en local con **git clone**, e inicializamos git flow con **git flow init**, el cual nos hará una serie de preguntas para configurar las ramas segun queramos.
 
+---
+
 ![Estructura](./capturas_practica_GIT/estructura%20y%20primer_commit.png)
 Empezamos con el codigo en si, abrimos Visual Studio Code y generamos la estructura del proyecto con los cuatro archivos html (index, atributos_html, contenido_html y estilos_CSS) y un archivo CSS (styles).
 Despues, con **git add .** añadimos los archivos generados a la zona de trabajo y realizamos el commit (**git commit -m**) junto con el mensaje que describa lo que hemos hecho, describiendo el usuario que lo ha realizado (user_1)
-Finalmente, con **git push origin develop** sincronizamos la rama en remoto.
+Finalmente, con **git push origin develop** sincronizamos el trabajo con la rama en remoto.
 (En este caso, he realizado los cambios directamente en develop porque no habia nada y consideraba un sin sentido crear una rama feature)
+
+---
+
+![Comprobar_1](./capturas_practica_GIT/comprobar%20primer%20_commit.png)
+Comprobamos en Github que todo este correcto.
+
+---
+
+![Segundo](./capturas_practica_GIT/segundo_commit.png)
+Haciendo uso de la libreria git flow, creamos una feature con el comando **git flow feature start**. Automaticamente se crea una nueva rama y nos cambia a ella.
+
+Abrimos Visual Studio y modificamos el codigo debido, en este caso la seccion de la web que trata de modificar el contenido HTML. Seguidamente (y siguiendo el consejo que dio el profesor en clase) hacemos dos commits uno referente a la modificacion del HTML y otro para el CSS, asi se podra ver mejor la separacion en ramas de trabajo que si lo hiciesemos en un solo commit.
+
+Seguidamente, comprobamos con **git status** que no haya nada en el area de trabajo y cerramos la feature (y la rama) con **git flow feature finish**. Finalmente, comprobamos que el arbol de trabajo sea correcto con **git log --graph**
+
+⚠️ **Error!** En este commit me he equivocado y he puesto @user_1, cuando deberia ser @user_2.
+
+---
+
+![Tercero](./capturas_practica_GIT/tercer_commit.png)
+
+Igual que antes, creamos una nueva feature.
+Abrimos Visual Studio y modificamos el codigo debido, en este caso atributosHTML. Hacemos dos commits añadiendo el nombre de usuario, para segmentar el trabajo .
+
+Y cerramos la feature (y la rama) con **git flow feature finish**.
+
+---
+
+![Cuarto](./capturas_practica_GIT/cuarto_commit.png)
+
+Igual que en los anteriores, creamos una nueva feature.
+Abrimos Visual Studio y modificamos el codigo debido, en este caso estilosCSS. Hacemos dos commits añadiendo el nombre de usuario, para segmentar el trabajo .
+
+Y cerramos la feature (y la rama) con **git flow feature finish**.
+
+---
+
+![Release](./capturas_practica_GIT/release.png)
+
+En este paso, vamos a crear la release de todo el trabajo realizado. Para ello, la creamos con el comando **git flow release start +version**.
+Automaticamente se crea una nueva rama y nos cambia a ella.
+Abrimos Visual Studio y modificamos el codigo con los ultimos cambios antes de trasladarlo a produccion.
+En este caso, se modifica el titulo de index.html y se crea un pequeño readme.md temporal.
+Hacemos dos commits añadiendo las modificaciones anteriores junto nombre de usuario y cerramos la release (y la rama) con **git flow release finish**.
