@@ -99,3 +99,9 @@ button:hover {
 button:hover:last-child {
   background-color: rgb(202, 168, 124);
 }
+
+/* Atributos html */
+.nuevo-estilo {
+  text-decoration: underline;
+  border: 1px solid black;
+}
