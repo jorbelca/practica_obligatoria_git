@@ -105,9 +105,23 @@ button:hover:last-child {
   text-decoration: underline;
   border: 1px solid black;
 }
+button.attr_html {
+  background-color: maroon;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+button.attr_html:disabled {
+  cursor: not-allowed;
+  background-color: rgba(128, 0, 0, 0.631);
+}
 
 /* Pagina modificar_CSS */
-section.modificar_CSS > div {
+section.modificar_CSS > div,
+section.contenido_html > div,
+section.atributos_html > div {
   margin: 60px 0px;
 }
 
