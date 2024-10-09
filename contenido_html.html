@@ -4,27 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Desplegaments</title>
+    <title>Modificar HTML</title>
   </head>
   <body>
     <!-- Cabecera -->
     <header>
-      <h1>Nombre del curso y fondo</h1>
-      <p>Imagen de fondo</p>
+      <h1>Modificar HTML</h1>
     </header>
 
     <!-- Barra de navegación -->
     <nav>
-        <a href="./index.html">Home</a>
-  
+      <a href="./index.html">Home</a>
     </nav>
 
     <!-- Contenido principal -->
     <section>
-      <h2>Descripción del curso</h2>
-      <p>
-        Aquí va una breve descripción del curso de Javascript aplicado a HTML.
+      <h2>Podemos modificar el HTML?</h2>
+
+      <p id="demo">
+        Con JS podemos modificar el contenido del HTML de forma sencilla.
       </p>
+
+      <button
+        type="button"
+        class="contenido_html"
+        onclick='document.getElementById("demo").innerHTML = "Elemento modificado mediante JavaScript!"'
+      >
+        Clicar
+      </button>
+      <button
+        type="button"
+        class="contenido_html"
+        onclick='document.getElementById("demo").innerHTML = "Con JS podemos modificar el contenido del HTML de forma sencilla."'
+      >
+        Revertir
+      </button>
     </section>
 
     <!-- Footer -->
