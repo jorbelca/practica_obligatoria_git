@@ -100,8 +100,46 @@ button:hover:last-child {
   background-color: rgb(202, 168, 124);
 }
 
-/* Atributos html */
+/* Pagina Atributos html */
 .nuevo-estilo {
   text-decoration: underline;
   border: 1px solid black;
+}
+
+/* Pagina modificar_CSS */
+section.modificar_CSS > div {
+  margin: 60px 0px;
+}
+
+button.modificar-CSS {
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+button.modificar-CSS:last-child {
+  background-color: #7b69e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+button.modificar-CSS:hover {
+  background-color: #45a049;
+}
+
+button.modificar-CSS:last-child:hover {
+  background-color: #6e5ec7;
 }
