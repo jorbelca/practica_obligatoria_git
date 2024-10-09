@@ -107,7 +107,8 @@ button:hover:last-child {
 }
 
 /* Pagina modificar_CSS */
-section.modificar_CSS > div {
+section.modificar_CSS > div,
+section.contenido_html > div {
   margin: 60px 0px;
 }
 
