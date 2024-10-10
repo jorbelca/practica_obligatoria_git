@@ -131,9 +131,11 @@ Las dos pull request despues, del hotfix son inconsistencias en Github entre mai
 
 1. Index.html
 
-![Atributos](./capturas_practica_GIT/atributos.png) 2. AtributosHTML.html
+![Atributos](./capturas_practica_GIT/atributos.png)
+ 2. AtributosHTML.html
 
-![Modificar HTML](./capturas_practica_GIT/modificar.png) 3. ModificarHTML.html
+![Modificar HTML](./capturas_practica_GIT/modificar.png)
+ 3. ModificarHTML.html
 
 ![CSS](./capturas_practica_GIT/css.png)
 
