@@ -95,8 +95,46 @@ Y cerramos la feature (y la rama) con **git flow feature finish**.
 
 ![Release](./capturas_practica_GIT/release.png)
 
-En este paso, vamos a crear la release de todo el trabajo realizado. Para ello, la creamos con el comando **git flow release start +version**.
+En este paso, vamos a publicar todo el trabajo realizado con una release . Para ello, creamos una nueva rama con el comando **git flow release start +version**.
 Automaticamente se crea una nueva rama y nos cambia a ella.
 Abrimos Visual Studio y modificamos el codigo con los ultimos cambios antes de trasladarlo a produccion.
 En este caso, se modifica el titulo de index.html y se crea un pequeño readme.md temporal.
 Hacemos dos commits añadiendo las modificaciones anteriores junto nombre de usuario y cerramos la release (y la rama) con **git flow release finish**.
+Al cerrar la release, se actualiza automaticamente main y develop y se crea una etiqueta que marque el hito (v1.0)
+
+---
+
+![Hotfix](./capturas_practica_GIT/hotfix.png)
+Siguiendo las instrucciones de la practica, @user_1 se percata que falta contenido en las secciones que ha realizado @user_2 y decide ampliar-lo, para ello crea una hotfix con el comando **git flow hotfix start +version**. En este caso, se crea una nueva rama partiendo del codigo de main.
+
+Abrimos Visual Studio y añadimos un par de ejemplos con sus estilos a contenido_html y otro par a modificar_html, hacemos dos commits del trabajo realizado y acabamos cerrando la rama y publicando el hotfix con el comando **git flow hotfix finish +version**.
+
+Al cerrar la rama, git flow automaticamente actualiza y hace un merge en main y en develop, ademas de crear una tag con la version (v.1.1).
+
+Para acabar, sincronizamos main y develop con github con git push.
+
+---
+
+![Tags](./capturas_practica_GIT/tags.png)
+Como último paso, sincronizamos las tags que hemos ido creando en local y que no se sincronizan automaticamente en remoto con el comando **git push --tags**
+
+---
+
+![Grafo](./capturas_practica_GIT/grafo.png)
+A modo de conclusion, dejo una captura de la representacion gráfica de los diferentes commits realizados en las dos ramas principales (main en amarillo y develop en azul ) y las diferentes ramas de trabajo.
+
+Las dos pull request despues, del hotfix son inconsistencias en Github entre main y develop que creo que venian por las tags, el codigo estaba correcto.
+
+### Capturas del proyecto Web
+
+![Index](./capturas_practica_GIT/index.png)
+
+1. Index.html
+
+![Atributos](./capturas_practica_GIT/atributos.png) 2. AtributosHTML.html
+
+![Modificar HTML](./capturas_practica_GIT/modificar.png) 3. ModificarHTML.html
+
+![CSS](./capturas_practica_GIT/css.png)
+
+4. ModificarCSS.html
